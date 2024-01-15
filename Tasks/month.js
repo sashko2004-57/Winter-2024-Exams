@@ -2,7 +2,7 @@
 
 'use strict';
 
-monthNamePrefixes = [
+const monthNamePrefixes = [
   'jan',
   'feb',
   'mar',
@@ -16,12 +16,12 @@ monthNamePrefixes = [
   'nov',
   'dec',
 ];
+const amountOfMonths = monthNamePrefixes.length;
 
-getNumberOfMonth = (monthName) => {
-  amountOfMonths = monthNamePrefixes.length;
-  for (let indexOfMonth = 0; indexOfMonth < amountOfMonths; indexOfMonth++) {
-    if (monthName.toLowerCase().startsWith(monthNamePrefixes[indexOfMonth])) {
-      return indexOfMonth + 1;
+const getNumberOfMonth = (monthName) => {
+  for (const monthNameCheckingPrefix of monthNamePrefixes) {
+    if (monthName.toLowerCase().startsWith(monthNameCheckingPrefix)) {
+      return monthNamePrefixes.indexOf(monthNameCheckingPrefix) + 1;
     }
   }
   return -1;

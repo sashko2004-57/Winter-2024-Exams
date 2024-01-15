@@ -5,7 +5,7 @@
 const splitArray = (lengthOfFirstPart, initialArray) => {
   const begin = initialArray.slice(0, lengthOfFirstPart);
   const lengthOfArray = initialArray.length;
-  initialArray = initialArray.slice(lengthOfFirstPart, lenthOfArray);
+  initialArray = initialArray.slice(lengthOfFirstPart, lengthOfArray);
   return [begin, initialArray];
 };
 

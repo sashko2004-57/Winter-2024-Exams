@@ -2,14 +2,14 @@
 
 'use strict';
 
-count = (obj) => {
-  sum = 0;
-  keys = Object.keys(obj);
-  keys.forEach((key) => {
-    const value = obj[key];
-    if (typeof value === 'number') sum += value;
+const sumNumberValues = (dictionary) => {
+  let sumOfValues = 0;
+  const keysOfObject = Object.keys(dictionary);
+  keysOfObject.forEach((key) => {
+    const value = dictionary[key];
+    if (typeof value === 'number') sumOfValues += value;
   });
-  return sum;
+  return sumOfValues;
 };
 
-module.exports = count;
+module.exports = sumNumberValues;

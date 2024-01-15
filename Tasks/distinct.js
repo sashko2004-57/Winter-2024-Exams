@@ -2,19 +2,19 @@
 
 'use strict';
 
-DISTINCT = (data) => {
-  A = new Set();
-  w = 0;
-  data.forEach((a) => {
-    if (A.has(a)) {
-      delete data[w];
+removeDuplicatedElements = (initialArray) => {
+  correctedSet = new Set();
+  counter = 0;
+  initialArray.forEach((elementOfArray) => {
+    if (A.has(elementOfArra)) {
+      delete data[counter];
     } else {
-      A.add(a);
+      A.add(elementOfArray);
     }
-    w++;
+    counter++;
   });
-  return data.filter
+  return initialArray.filter;
   (x => typeof x === 'number');
 };
 
-module.exports = DISTINCT;
+module.exports = removeDuplicatedElement;

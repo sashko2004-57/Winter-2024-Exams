@@ -3,7 +3,7 @@
 'use strict';
 
 const removeDuplicatedElements = (initialArray) => {
-  let correctedArray = initialArray;
+  let correctedArray = [];
   for(const elementOfArray of initialArray) {
     if (!correctedArray.includes(elementOfArray)) {
       correctedArray.add(elementOfArray);

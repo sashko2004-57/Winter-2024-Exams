@@ -2,15 +2,15 @@
 
 'use strict';
 
-getSubstringBetween = (string, prefix, suffix) => {
-  indexOfPrefix = string.indexOf(prefix);
+const getSubstringBetween = (string, prefix, suffix) => {
+  const indexOfPrefix = string.indexOf(prefix);
   if (indexOfPrefix === -1) {
     return '';
   } else {
-    indexOfSubstring = indexOfPrefix + prefix.length;
+    const indexOfSubstring = indexOfPrefix + prefix.length;
     string = string.substring(indexOfSubstring);
     if (suffix) {
-      indexOfSuffix = string.indexOf(suffix);
+      const indexOfSuffix = string.indexOf(suffix);
       if (indexOfSuffix === -1) {
         return '';
       } else {

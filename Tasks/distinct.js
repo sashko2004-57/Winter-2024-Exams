@@ -6,8 +6,8 @@ removeDuplicatedElements = (initialArray) => {
   correctedSet = new Set();
   counter = 0;
   initialArray.forEach((elementOfArray) => {
-    if (A.has(elementOfArray)) {
-      delete data[counter];
+    if (correctedSet.has(elementOfArray)) {
+      delete initialArray[counter];
     } else {
       correctedSet.add(elementOfArray);
     }

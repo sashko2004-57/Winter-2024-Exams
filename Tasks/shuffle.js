@@ -2,12 +2,12 @@
 
 'use strict';
 
-const Shuffle = (...List) => {
-  const [arr] = List;
-  arr.sort(() => Math.random() - 0.5);
+const shuffle = (...initialArray) => {
+  const [shuffledArray] = initialArray;
+  shuffledArray.sort(() => Math.random() - 0.5);
   {
-    return arr;
+    return shuffledArray;
   }
 };
 
-module.exports = Shuffle;
+module.exports = shuffle;

@@ -10,7 +10,7 @@ getSubstringBetween = (string, prefix, suffix) => {
     indexOfSubstring = indexOfPrefix + prefix.length;
     string = string.substring(indexOfSubstring);
     if (suffix) {
-      indexOfSuffix = str.indexOf(suffix);
+      indexOfSuffix = string.indexOf(suffix);
       if (indexOfSuffix === -1) {
         return '';
       } else {

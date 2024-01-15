@@ -9,7 +9,7 @@ const removeDuplicatedElements = (initialArray) => {
       correctedArray.push(elementOfArray);
     }
   };
-  return correctedArray.filter;
+  return correctedArray;
 };
 
 module.exports = removeDuplicatedElements;

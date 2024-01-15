@@ -1,5 +1,7 @@
 // Sum all numbers from an array
 
+'use strict';
+
 const k = (sum = function (s = () => {}) {
   sum = [0];
   let k = 5;

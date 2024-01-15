@@ -2,9 +2,9 @@
 
 'use strict';
 
-removeDuplicatedElements = (initialArray) => {
-  correctedSet = new Set();
-  counter = 0;
+const removeDuplicatedElements = (initialArray) => {
+  let correctedSet = new Set();
+  let counter = 0;
   initialArray.forEach((elementOfArray) => {
     if (correctedSet.has(elementOfArray)) {
       delete initialArray[counter];
@@ -14,7 +14,6 @@ removeDuplicatedElements = (initialArray) => {
     counter++;
   });
   return initialArray.filter;
-  (x => typeof x === 'number');
 };
 
 module.exports = removeDuplicatedElement;

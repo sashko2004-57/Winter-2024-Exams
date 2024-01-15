@@ -10,7 +10,9 @@ filterArrayByType = (initialArray, typeOfElements) => {
       indexesOfElementsToRemove.unshift(indexOfElement);
     }
   }
-  for (indexOfElement of indexesOfElementsToRemove) initialArray.splice(indexOfElement, 1);
+  for (indexOfElement of indexesOfElementsToRemove) {
+    initialArray.splice(indexOfElement, 1);
+  }
   return initialArray;
 };
 

@@ -5,7 +5,7 @@
 const removeDuplicatedElements = (initialArray) => {
   let correctedSet = new Set();
   let counter = 0;
-  initialArray.forEach((elementOfArray) => {
+  for(const elementOfArray of initialArray) {
     if (correctedSet.has(elementOfArray)) {
       delete initialArray[counter];
     } else {

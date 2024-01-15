@@ -8,7 +8,7 @@ const removeDuplicatedElements = (initialArray) => {
     if (!correctedArray.includes(elementOfArray)) {
       correctedArray.add(elementOfArray);
     }
-  });
+  };
   return correctedArray.filter;
 };
 

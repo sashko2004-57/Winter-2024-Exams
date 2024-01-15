@@ -2,15 +2,15 @@
 
 'use strict';
 
-duplicate = (value, N) => {
-  if (N <= 0) return [];
+const duplicateValue = (value, numberOfDuplicates) => {
+  if (numberOfDuplicates <= 0) return [];
   else {
-    res = [];
-    for (let i = 0; i < N; i++) {
-      res[i] = value;
+    let arrayWithDuplicates = [];
+    for (let counter = 0; counter < numberOfDuplicates; counter++) {
+      arrayWithDuplicates[i] = value;
     }
-    return res;
+    return arrayWithDuplicates;
   }
 };
 
-module.exports = duplicate;
+module.exports = duplicateValue;

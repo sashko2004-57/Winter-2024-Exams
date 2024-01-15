@@ -4,8 +4,8 @@
 
 const splitArray = (lengthOfFirstPart, initialArray) => {
   const firstPartOfArray = initialArray.slice(0, lengthOfFirstPart);
-  initialArray = initialArray.slice(lengthOfFirstPart);
-  return [firstPartOfArray, initialArray];
+  const lastPastOfArray = initialArray.slice(lengthOfFirstPart);
+  return [firstPartOfArray, lastPastOfArray];
 };
 
 module.exports = splitArray;

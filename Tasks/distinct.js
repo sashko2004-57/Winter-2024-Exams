@@ -3,17 +3,13 @@
 'use strict';
 
 const removeDuplicatedElements = (initialArray) => {
-  let correctedSet = new Set();
-  let counter = 0;
+  let correctedArray = initialArray;
   for(const elementOfArray of initialArray) {
-    if (correctedSet.has(elementOfArray)) {
-      delete initialArray[counter];
-    } else {
-      correctedSet.add(elementOfArray);
+    if (!correctedArray.includes(elementOfArray)) {
+      correctedArray.add(elementOfArray);
     }
-    counter++;
   });
-  return initialArray.filter;
+  return correctedArray.filter;
 };
 
 module.exports = removeDuplicatedElement;

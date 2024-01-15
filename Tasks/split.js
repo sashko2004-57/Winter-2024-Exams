@@ -3,10 +3,9 @@
 'use strict';
 
 const splitArray = (lengthOfFirstPart, initialArray) => {
-  const begin = initialArray.slice(0, lengthOfFirstPart);
-  const lengthOfArray = initialArray.length;
-  initialArray = initialArray.slice(lengthOfFirstPart, lengthOfArray);
-  return [begin, initialArray];
+  const firstPartOfArray = initialArray.slice(0, lengthOfFirstPart);
+  initialArray = initialArray.slice(lengthOfFirstPart);
+  return [firstPartOfArray, initialArray];
 };
 
 module.exports = splitArray;

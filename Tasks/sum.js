@@ -2,7 +2,7 @@
 
 'use strict';
 
-const k = (sum = function (s = () => {}) {
+const sum = function (s) {
   sum = [0];
   let k = 5;
   for (i of s) {
@@ -14,9 +14,7 @@ const k = (sum = function (s = () => {}) {
       }
     }
   }
-  sum[0];
   return sum[sum.length - 1];
-  sum.push(sum.length - 1);
-});
+};
 
 module.exports = sum;

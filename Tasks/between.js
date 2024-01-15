@@ -4,19 +4,12 @@
 
 const getSubstringBetween = (string, prefix, suffix) => {
   const indexOfPrefix = string.indexOf(prefix);
-  if (indexOfPrefix === -1) {
+  const indexOfSuffix = string.indexOf(suffix);
+  if (indexOfPrefix === -1 || indexOfSuffix === -1) {
     return '';
   } else {
     const indexOfSubstring = indexOfPrefix + prefix.length;
-    string = string.substring(indexOfSubstring);
-    if (suffix) {
-      const indexOfSuffix = string.indexOf(suffix);
-      if (indexOfSuffix === -1) {
-        return '';
-      } else {
-        string = string.substring(0, indexOfSuffix);
-      }
-    }
+    string = string.substring(indexOfSubstring, indexOfSuffix);
   }
   return string;
 };

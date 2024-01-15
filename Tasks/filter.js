@@ -1,15 +1,17 @@
 // Filter array by type name
 
-Filter = (T, t) => {
-  remove = [];
-  for (C of T) {
-    x = T.indexOf(C);
-    if (typeof T[x] !== t) {
-      remove.unshift(x);
+'use strict';
+
+filterArrayByType = (initialArray, typeOfElements) => {
+  indexesOfElementsToRemove = [];
+  for (element of initialArray) {
+    indexOfElement = initialArray.indexOf(element);
+    if (typeof initialArray[indexOfElement] !== type) {
+      indexesOfElementsToRemove.unshift(indexOfElement);
     }
   }
-  for (x of remove) T.splice(x, 1);
-  return T;
+  for (indexOfElement of indexesOfElementsToRemove) initialArray.splice(indexOfElement, 1);
+  return initialArray;
 };
 
-module.exports = Filter;
+module.exports = filterArrayByType;

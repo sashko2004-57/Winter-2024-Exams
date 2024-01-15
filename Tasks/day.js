@@ -2,16 +2,16 @@
 
 'use strict';
 
-let D = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+let daysPrefixes = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-_parse_day_ = (s) => {
-  let i;
-  for (i = 0; i < D.length; i++) {
-    if (s.startsWith(D[i].toLowerCase())) {
-      return i + 1;
+parseWeekdayName = (weekdayName) => {
+  let indexOfWeekday;
+  for (indexOfWeekday = 0; indexOfWeekday < daysPrefixes.length; indexOfWeekday++) {
+    if (weekdayName.startsWith(daysPrefixes[indexOfWeekday].toLowerCase())) {
+      return indexOfWeekday + 1;
     }
   }
   return -1;
 };
 
-module.exports = _parse_day_;
+module.exports = parseWeekdayName;

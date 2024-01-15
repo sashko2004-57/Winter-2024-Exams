@@ -6,7 +6,7 @@ const filterArrayByType = (initialArray, typeOfElements) => {
   let filteredArray = [];
   for (const element of initialArray) {
     if (typeof element === type) {
-      filteredArray.concat(element);
+      filteredArray.push(element);
     }
   }
   return filteredArray;

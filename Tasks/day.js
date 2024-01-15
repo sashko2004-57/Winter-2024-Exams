@@ -4,7 +4,7 @@
 
 const daysPrefixes = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
-parseWeekdayName = (weekdayName) => {
+const parseWeekdayName = (weekdayName) => {
   for (const weekdayPrefix of daysPrefixes) {
     if (weekdayName.startsWith(weekdayPrefix)) {
       return daysPrefixes.indexOf(weekdayPrefix) + 1;

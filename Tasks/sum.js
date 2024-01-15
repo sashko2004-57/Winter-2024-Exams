@@ -9,7 +9,7 @@ const sumNumbersFromArray = function (array) {
   for (const element of array) {
     let typeOfElement = typeof element;
     if (typeOfElement === numberTypeName) {
-      const sumValue += element;
+      sumValue += element;
     }
   }
   return sumValue;

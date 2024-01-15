@@ -5,7 +5,7 @@
 const filterArrayByType = (initialArray, typeOfElements) => {
   let filteredArray = [];
   for (const element of initialArray) {
-    if (typeof element === type) {
+    if (typeof element === typeOfElements) {
       filteredArray.push(element);
     }
   }

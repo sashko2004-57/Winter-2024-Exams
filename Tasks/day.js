@@ -2,13 +2,12 @@
 
 'use strict';
 
-let daysPrefixes = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
+const daysPrefixes = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
 parseWeekdayName = (weekdayName) => {
-  let indexOfWeekday;
-  for (indexOfWeekday = 0; indexOfWeekday < daysPrefixes.length; indexOfWeekday++) {
-    if (weekdayName.startsWith(daysPrefixes[indexOfWeekday])) {
-      return indexOfWeekday + 1;
+  for (const weekdayPrefix of daysPrefixes) {
+    if (weekdayName.startsWith(weekdayPrefix)) {
+      return daysPrefixes.indexOf(weekdayPrefix) + 1;
     }
   }
   return -1;

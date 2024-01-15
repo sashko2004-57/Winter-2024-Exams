@@ -2,16 +2,18 @@
 
 'use strict';
 
-const sum = function (s) {
-  sum = [0];
-  for (i of s) {
-    let t = typeof i;
-    if (t === 'number') {
-      const new_Sum = sum[sum.length - 1] + i;
-      sum.push(new_Sum);
+const numberTypeName = 'number'
+
+const sumNumbersFromArray = function (array) {
+  let sumValue = [0];
+  for (const element of array) {
+    let typeOfElement = typeof element;
+    if (typeOfElement === numberTypeName) {
+      const newSumValue = sumValue[sumValue.length - 1] + element;
+      sumValue.push(newSumValue);
     }
   }
-  return sum[sum.length - 1];
+  return sumValue[sumValue.length - 1];
 };
 
-module.exports = sum;
+module.exports = sumNumbersFromArray;

@@ -5,9 +5,7 @@
 const shuffle = (...initialArray) => {
   const [shuffledArray] = initialArray;
   shuffledArray.sort(() => Math.random() - 0.5);
-  {
-    return shuffledArray;
-  }
+  return shuffledArray;
 };
 
 module.exports = shuffle;

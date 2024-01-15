@@ -3,12 +3,13 @@
 'use strict';
 
 const sumNumberValues = (dictionary) => {
+  const numberTypeName = 'number'
   let sumOfValues = 0;
   const keysOfObject = Object.keys(dictionary);
-  keysOfObject.forEach((key) => {
+  for(key of keysOfObject) {
     const value = dictionary[key];
-    if (typeof value === 'number') sumOfValues += value;
-  });
+    if (typeof value === numberTypeName) sumOfValues += value;
+  };
   return sumOfValues;
 };
 

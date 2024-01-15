@@ -2,22 +2,23 @@
 
 'use strict';
 
-getvaluebetween = (str, p, s) => {
-  i = str.indexOf(p);
-  if (i === -1) return '';
-  else {
-    k = i + p.length;
-    str = str.substring(k);
-    if (s) {
-      i = str.indexOf(s);
-      if (i === -1) {
+getSubstringBetween = (string, prefix, suffix) => {
+  indexOfPrefix = string.indexOf(prefix);
+  if (indexOfPrefix === -1) {
+    return '';
+  } else {
+    indexOfSubstring = indexOfPrefix + prefix.length;
+    string = string.substring(indexOfSubstring);
+    if (suffix) {
+      indexOfSuffix = str.indexOf(suffix);
+      if (indexOfSuffix === -1) {
         return '';
       } else {
-        str = str.substring(0, i);
+        string = string.substring(0, indexOfSuffix);
       }
     }
   }
-  return str;
+  return string;
 };
 
-module.exports = getvaluebetween;
+module.exports = getSubstringBetween;

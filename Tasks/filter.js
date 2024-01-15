@@ -3,18 +3,13 @@
 'use strict';
 
 const filterArrayByType = (initialArray, typeOfElements) => {
-  let indexesOfElementsToRemove = [];
-  let indexOfElement;
+  let filteredArray = [];
   for (const element of initialArray) {
-    indexOfElement = initialArray.indexOf(element);
-    if (typeof initialArray[indexOfElement] !== type) {
-      indexesOfElementsToRemove.unshift(indexOfElement);
+    if (typeof element === type) {
+      filteredArray.concat(element);
     }
   }
-  for (const indexOfElement of indexesOfElementsToRemove) {
-    initialArray.splice(indexOfElement, 1);
-  }
-  return initialArray;
+  return filteredArray;
 };
 
 module.exports = filterArrayByType;

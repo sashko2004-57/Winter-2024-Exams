@@ -4,8 +4,9 @@
 
 const filterArrayByType = (initialArray, typeOfElements) => {
   let indexesOfElementsToRemove = [];
+  let indexOfElement;
   for (const element of initialArray) {
-    let indexOfElement = initialArray.indexOf(element);
+    indexOfElement = initialArray.indexOf(element);
     if (typeof initialArray[indexOfElement] !== type) {
       indexesOfElementsToRemove.unshift(indexOfElement);
     }

@@ -5,15 +5,14 @@
 const numberTypeName = 'number'
 
 const sumNumbersFromArray = function (array) {
-  let sumValue = [0];
+  let sumValue = 0;
   for (const element of array) {
     let typeOfElement = typeof element;
     if (typeOfElement === numberTypeName) {
-      const newSumValue = sumValue[sumValue.length - 1] + element;
-      sumValue.push(newSumValue);
+      const sumValue += element;
     }
   }
-  return sumValue[sumValue.length - 1];
+  return sumValue;
 };
 
 module.exports = sumNumbersFromArray;

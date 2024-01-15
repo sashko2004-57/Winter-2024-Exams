@@ -12,4 +12,4 @@ const removeDuplicatedElements = (initialArray) => {
   return correctedArray.filter;
 };
 
-module.exports = removeDuplicatedElement;
+module.exports = removeDuplicatedElements;

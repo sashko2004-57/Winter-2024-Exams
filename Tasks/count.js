@@ -6,9 +6,11 @@ const sumNumberValues = (dictionary) => {
   const numberTypeName = 'number'
   let sumOfValues = 0;
   const keysOfObject = Object.keys(dictionary);
-  for(key of keysOfObject) {
+  for(const key of keysOfObject) {
     const value = dictionary[key];
-    if (typeof value === numberTypeName) sumOfValues += value;
+    if (typeof value === numberTypeName) {
+      sumOfValues += value;
+    }
   };
   return sumOfValues;
 };
